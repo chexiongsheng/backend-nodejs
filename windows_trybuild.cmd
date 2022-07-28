@@ -24,4 +24,4 @@ echo =====[ make_v8_inspector_export.js ]=====
 node %~dp0\make_v8_inspector_export.js
 
 echo =====[ Building Node.js ]=====
-.\vcbuild.bat dll openssl-no-asm
+.\vcbuild.bat dll openssl-no-asm vs2017
