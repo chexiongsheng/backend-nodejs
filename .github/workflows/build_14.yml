@@ -13,8 +13,12 @@ env:
 jobs:
   build_windows:
     name: Windows
-    runs-on: windows-2016
+    runs-on: windows-2022
     steps:
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+      with:
+        vs-version: '[16.4,16.5)'
     - uses: actions/checkout@v2
     - name: Run build script
       continue-on-error: true
@@ -34,8 +38,12 @@ jobs:
         
   build_windows_32:
     name: Windows-32
-    runs-on: windows-2016
+    runs-on: windows-2022
     steps:
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+      with:
+        vs-version: '[16.4,16.5)'
     - uses: actions/checkout@v2
     - name: Run build script
       continue-on-error: true
