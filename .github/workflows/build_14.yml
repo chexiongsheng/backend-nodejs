@@ -13,13 +13,8 @@ env:
 jobs:
   build_windows:
     name: Windows
-    runs-on: windows-2019
+    runs-on: windows-2016
     steps:
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
-      with:
-        vs-version: '[15.9,15.10)'
-        msbuild-architecture: x64
     - uses: actions/checkout@v2
     - name: Run build script
       continue-on-error: true
@@ -39,13 +34,8 @@ jobs:
         
   build_windows_32:
     name: Windows-32
-    runs-on: windows-2019
+    runs-on: windows-2016
     steps:
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
-      with:
-        vs-version: '[15.9,15.10)'
-        msbuild-architecture: x86
     - uses: actions/checkout@v2
     - name: Run build script
       continue-on-error: true
