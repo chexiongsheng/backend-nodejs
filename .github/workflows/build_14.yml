@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-2022
     steps:
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v1.0.2
       with:
         vs-version: '[16.4,16.5)'
     - uses: actions/checkout@v2
@@ -41,7 +41,7 @@ jobs:
     runs-on: windows-2022
     steps:
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v1.0.2
       with:
         vs-version: '[16.4,16.5)'
     - uses: actions/checkout@v2
